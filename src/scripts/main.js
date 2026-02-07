@@ -79,8 +79,7 @@ startButton.addEventListener('click', () => {
     startButton.classList.replace('start', 'restart');
   } else {
     game.restart();
-    startButton.textContent = 'Start';
-    startButton.classList.replace('restart', 'start');
+    startButton.textContent = 'Restart';
   }
 
   updateField();

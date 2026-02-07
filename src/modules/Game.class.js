@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 class Game {
   static gameStatus = {
-    idle: 'idle',
-    playing: 'playing',
-    win: 'win',
-    lose: 'lose',
+    idle: "idle",
+    playing: "playing",
+    win: "win",
+    lose: "lose",
   };
 
   static getInitialState() {
@@ -46,8 +46,11 @@ class Game {
 
   restart() {
     this.score = 0;
-    this.state = this.initialState;
-    this.status = Game.gameStatus.idle;
+    this.state = Game.getInitialState();
+    this.status = Game.gameStatus.playing;
+
+    this.addRandomTile();
+    this.addRandomTile();
   }
 
   mergeAndSlideRow(row) {
